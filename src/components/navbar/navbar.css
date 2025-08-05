@@ -1,0 +1,8 @@
+.bg-deep-navy {
+  background-color: rgb(44, 62, 80);
+}
+.active {
+  background-color: #1abc9c;
+  border-radius: 0.5rem;
+  border: 1px solid #1abc9c;
+}

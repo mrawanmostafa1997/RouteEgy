@@ -1,0 +1,59 @@
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade vh-100 vw-100 m-auto"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog d-flex h-100 w-100 justify-content-center align-items-center"
+  >
+    <div class="modal-content">
+      <div #viewPort class="modal-body p-0 m-0">...</div>
+    </div>
+  </div>
+</div>
+<div class="container position-relative">
+  <h1 class="fw-bolder text-center text-uppercase text-navy">
+    portfolio Component
+  </h1>
+  <div class="d-flex container justify-content-center align-items-center">
+    <div
+      class="border-top border-5 w-25 my-3 fw-bolder text-center m-auto"
+    ></div>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <div
+      class="border-top border-5 w-25 my-3 fw-bolder text-center m-auto"
+    ></div>
+  </div>
+  <div class="row d-flex justify-content-center align-content-center">
+    @for (photo of photos; track $index) {
+    <div class="col-lg-4 col-md-6 col-12 p-5 m-0">
+      <div
+        #imgContainer
+        (click)="previewImage(imgContainer)"
+        class="img-container position-relative"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 rounded-3 layer d-flex justify-content-center align-items-center"
+        >
+          <i class="text-white fa-solid fa-plus fa-6x"></i>
+        </div>
+
+        <img
+          [src]="photo"
+          class="img-fluid rounded-3"
+          alt="Portfolio Image {{ $index + 1 }}"
+          style="width: 100%; height: auto; margin: 0; padding: 0"
+        />
+      </div>
+    </div>
+    }
+  </div>
+</div>

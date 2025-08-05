@@ -1,0 +1,23 @@
+.text-navy {
+  color: rgb(44, 62, 80);
+}
+.bg-navy-opacity {
+  background-color: rgb(44, 62, 80);
+  opacity: 0.5;
+}
+.layer {
+  transition: opacity 0.6s, background-color 0.6s;
+  padding: 0;
+  margin: 0;
+}
+.fa-plus {
+  display: none;
+}
+.layer:hover {
+  background-color: #1abc9ce6; /* Teal overlay with transparency */
+  opacity: 1; /* Ensure it's visible */
+  cursor: pointer;
+  .fa-plus {
+    display: block; /* Show the icon on hover */
+  }
+}
